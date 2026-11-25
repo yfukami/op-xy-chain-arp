@@ -1,6 +1,6 @@
 # Device checklist
 
-Not yet run. **Setup:** one track with a sustaining patch, with Chain Arp as its player. Use ARP 1 `up`, ARP 2 `down`, ARP 3 and 4 `off`, RATE `1/16`, GATE `50%`, OCTAVE `1` and CYCLES `2`. Hold or sequence C, E, G, B unless a check says otherwise.
+**Setup:** one track with a sustaining patch, with Chain Arp as its player. Use ARP 1 `up`, ARP 2 `down`, ARP 3 and 4 `off`, RATE `1/16`, GATE `50%`, OCTAVE `1` and CYCLES `2`. Hold or sequence C, E, G, B unless a check says otherwise.
 
 ## First: latch on the device
 
@@ -25,6 +25,21 @@ Not yet run. **Setup:** one track with a sustaining patch, with Chain Arp as its
 
 ## Screen and saving
 
-12. **Header.** Pass: on both pages, every label is readable without overlapping the next column. Watch `updn+`, `dnup+` and `thumb`, which are the widest.
+12. **Header.** Pass: on both pages, every label is readable without overlapping the next column. Watch `u/d+`, `d/u+` and `thmb`, which were shortened after overlapping.
 13. **Display.** Pass: the bar under the playing slot's column moves with the chain, the cycle squares count, the cells fill each cycle, and the text shows the slot and note.
 14. **Saving.** Set all 8 controls to unusual values, save, then reload the project. Pass: all 8 return.
+
+## Timing, stopping and controls
+
+15. **Transport stopped.** Hold a key with the transport stopped. Pass: the chain plays as it does while playing.
+16. **Transport playing.** Press play and hold a key against a drum at 80, 120 and 160 BPM. Pass: the chain stays locked, including across handovers.
+17. **Long hold.** GATE `10%`, hold three keys for five minutes. Pass: no stray or stuck notes, and no clicks.
+18. **Releasing keys one at a time.** GATE `100%`, RATE `1/4`, hold C, E, G and release them one by one. Pass: each released key's notes stop, the others keep playing, nothing hangs.
+19. **Stopping a sequence.** Sequence notes, press play, then stop mid-note. Pass: silence, nothing hangs.
+20. **Switching track and project while holding keys,** and again latched with CYCLES `2L`. Pass: nothing hangs, and the next key starts cleanly.
+21. **Nine keys.** Pass: eight play, and the ninth has no effect, including on release.
+22. **Full range and name.** Pass: one value per detent, CYCLES shows `1` to `8` then `1L` to `8L`, and the player menu shows `chained_arp` in full.
+
+## Results
+
+2026-11-24, OS 1.2.1, all 23 checks (1–22 and 10b) passed on build `all-007`, made from commit `969f9ef` plus the STYLE label change to `u/d+`, `d/u+` and `thmb`. Latch (checks 1–4) is confirmed on the device.
